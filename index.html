@@ -1,9 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<h1 id="title">Tell Me About Music</h1>
-</head>
-<body>
+ <head>
+ 	<style>
+ 	  body{
+ 	  	font-family: sans-serif;
+ 	  	padding-left: 20%;
+ 	  	padding-right: 20%;
 
-</body>
+ 	  }	
+
+ 	  label{
+ 	  	font-size: 18px;
+ 	  	display: block;
+ 	  	padding-bottom: 10px: 
+ 	  }
+ 	  input{
+ 	  	display: block;
+ 	  	width: 100%;
+
+ 	  }
+ 	  input, textarea, select{
+ 	  	display: block;
+ 	  	width: 100%;
+ 	  	padding-bottom: 20px;
+
+ 	  }
+
+ 	  form{
+ 	  	background-color: #CC0000;
+ 	  	padding:40px 40px 40px 40px;
+
+ 	  }
+
+ 	  input[type=checkbox]:not(old) + label,
+ 	  input[type=radio   ]:not(old) + label
+ 	  {
+ 	  	display: inline-block;
+ 	  	margin-left: -28px;
+ 	  	padding-left: 28px;
+ 	  }
+ 	  #button{
+ 	  	float: left;
+ 		
+ 		width: 50%;
+ 		height: 50%;
+ 	  }
+ 	</style>
+
+ </head>
+
+  <body>
+	<h1 id="title">Tell Me About Music</h1>
+	<p id="description">
+		This survey is about you telling us more about music
+	</p>
+	<form id="survey-form">
+	  <label id="name-label">Name:</label>
+	  <input type="text" name="name" id="name" required placeholder="First Name"><br>
+
+	  <label id="email-label">Email:</label>
+	  <input type="email" name="email" id="email" required placeholder="email"><br>	
+
+	  <label id="number-label">Number:</label>
+	  <input type="number" name="number" id="number" min="0" max="10" required placeholder="$"><br>
+
+	  <label id="guitar-label">Guitar Type:</label>
+	  <select id="dropdown" name="guitars">
+       <option value="fender">Fender</option>
+       <option value="martin">Martin</option>
+       <option value="epiphone">Epiphone</option>
+       <option value="other">Other</option>
+      <select>
+
+      	<label id="Comments">Name:</label>
+      	<textarea>Additional Comments</textarea><br>
+
+       
+       <div id="button">
+       	<label id="gender-label">Gender:</label>
+        <input type="radio" class="radio" id="male" name="gender" value="male">Male<br>
+        <input type="radio" class="radio" id="male" name="gender" value="female">Female<br>
+        <input type="radio" class="radio" id="male" name="gender" value="other">Other
+       </div>
+       
+
+       <div id="button">
+       	<label id="transport-label">Transportation:</label>
+	    <input type="checkbox" name="vehicle1" value="Bike">Bike<br>     
+	    <input type="checkbox" name="vehicle1" value="Car">Car<br>
+	    <input type="checkbox" name="vehicle1" value="Boat">Boat<br>
+	   </div>
+
+	   
+
+	   <input type="submit" id="submit">	
+	</form>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+ </body>
 </html>
