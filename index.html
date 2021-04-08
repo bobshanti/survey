@@ -1,100 +1,101 @@
-<!DOCTYPE html>
+<!DOCTYPE html>	
 <html>
  <head>
- 	<style>
- 	  body{
- 	  	font-family: sans-serif;
- 	  	padding-left: 20%;
- 	  	padding-right: 20%;
+   <style>
+   	 #header-img{
+   		width: 150px;
 
- 	  }	
+   	}
+	[class*="col-"] {
+	  	width: 100%;
+	}
 
- 	  label{
- 	  	font-size: 18px;
- 	  	display: block;
- 	  	padding-bottom: 10px: 
- 	  }
- 	  input{
- 	  	display: block;
- 	  	width: 100%;
+	@media only screen and (min-width: 768px) {
+  	/* For desktop: */
+  	.col-1 {width: 8.33%;}
+  	.col-2 {width: 16.66%;}
+  	.col-3 {width: 25%;}
+  	.col-4 {width: 33.33%;}
+  	.col-5 {width: 41.66%;}
+  	.col-6 {width: 50%;}
+  	.col-7 {width: 58.33%;}
+  	.col-8 {width: 66.66%;}
+  	.col-9 {width: 75%;}
+  	.col-10 {width: 83.33%;}
+  	.col-11 {width: 91.66%;}
+  	.col-12 {width: 100%;}
+	}
+	.flex-container{
+		display: flex;
+		justify-content: center;
+	}
 
- 	  }
- 	  input, textarea, select{
- 	  	display: block;
- 	  	width: 100%;
- 	  	padding-bottom: 20px;
+	body{
+		font-family: sans-serif;
+	}
+	.nav-link{
+		padding:20px;
+		margin:20px;
+	}
+	section{
+		padding-bottom: 50px;
+		padding-top: 50px;
 
- 	  }
-
- 	  form{
- 	  	background-color: #CC0000;
- 	  	padding:40px 40px 40px 40px;
-
- 	  }
-
- 	  input[type=checkbox]:not(old) + label,
- 	  input[type=radio   ]:not(old) + label
- 	  {
- 	  	display: inline-block;
- 	  	margin-left: -28px;
- 	  	padding-left: 28px;
- 	  }
- 	  #button{
- 	  	float: left;
- 		
- 		width: 50%;
- 		height: 50%;
- 	  }
- 	</style>
-
+	}
+	.flex-container > div{
+		width: 200px;
+		text-align: center;
+		line-height: 10px;
+		font-size: 14px;
+	}
+	#buy-on-amazon{
+		background-color: #cc0000;
+	}
+   </style>
  </head>
 
-  <body>
-	<h1 id="title">Tell Me About Music</h1>
-	<p id="description">
-		This survey is about you telling us more about music
-	</p>
-	<form id="survey-form">
-	  <label id="name-label">Name:</label>
-	  <input type="text" name="name" id="name" required placeholder="First Name"><br>
+<body>
+ <header id="header">
+ 	<center>
+    <img id="header-img" src="http://assets.stickpng.com/thumbs/5854655728fc2508128fec5d.png"/>
+     <nav id="nav-bar">
+      <a class="nav-link" href="#learn-more">Learn More</a>
+      <a class="nav-link" href="#request-coupon">Request Coupon</a>
+      <a class="nav-link" href="#buy-on-amazon">Buy at Online Store</a>
 
-	  <label id="email-label">Email:</label>
-	  <input type="email" name="email" id="email" required placeholder="email"><br>	
+     </nav>
+    </center>
+ </header>	
+  <section id="learn-more">
+  	<center>
+  	<h1>The Shure Microphone of Joe Rogan Experience</h1>
+	  <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/a_uR8D-JVNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center>
+  </section>
+  <section id="request-coupon">
+  	<center>
+  	  <h2>Request a Coupon</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+   	  <input id="email" type="email" placeholder="you@me.com" name="email"></input>
+   	  <input id="submit" type="submit"></input>
+      </form>
+   </center>
+  </section>
+  <section id="buy-on-amazon">
+	<div class="flex-container">
+		 <div>Buy on Amazon</div>
+		 <div>Buy on Ebay</div>
+		 <div>Buy on Shure</div>
+	</div>
+  </section>
 
-	  <label id="number-label">Number:</label>
-	  <input type="number" name="number" id="number" min="0" max="10" required placeholder="$"><br>
+  
 
-	  <label id="guitar-label">Guitar Type:</label>
-	  <select id="dropdown" name="guitars">
-       <option value="fender">Fender</option>
-       <option value="martin">Martin</option>
-       <option value="epiphone">Epiphone</option>
-       <option value="other">Other</option>
-      <select>
 
-      	<label id="Comments">Name:</label>
-      	<textarea>Additional Comments</textarea><br>
-
-       
-       <div id="button">
-       	<label id="gender-label">Gender:</label>
-        <input type="radio" class="radio" id="male" name="gender" value="male">Male<br>
-        <input type="radio" class="radio" id="male" name="gender" value="female">Female<br>
-        <input type="radio" class="radio" id="male" name="gender" value="other">Other
-       </div>
-       
-
-       <div id="button">
-       	<label id="transport-label">Transportation:</label>
-	    <input type="checkbox" name="vehicle1" value="Bike">Bike<br>     
-	    <input type="checkbox" name="vehicle1" value="Car">Car<br>
-	    <input type="checkbox" name="vehicle1" value="Boat">Boat<br>
-	   </div>
-
-	   
-
-	   <input type="submit" id="submit">	
-	</form>
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
  </body>
+ <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
+
+
+
+
